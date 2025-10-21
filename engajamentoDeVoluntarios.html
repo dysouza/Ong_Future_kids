@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Engajamento de Voluntários | FutureKids</title>
+  <link rel="stylesheet" href="voluntarios.css">
+</head>
+<body>
+  <!-- Cabeçalho institucional -->
+<div class="hero">
+  <header>
+    <nav class="linksPrincipais">
+      <ul class="menuLinks">
+        <li><a href="areainstitucional.html">Área Institucional</a></li>
+        <li><a href="gestaodeProjetos.html">Gestão de Projetos</a></li>
+        <li><a href="engajamentoDeVoluntarios.html">Engajamento de Voluntários</a></li>
+        <li><a href="captacaoderecursos.html">Captação de recursos</a></li>
+        <li><a href="comunicacaoetransparencia.html">Comunicação e Transparência</a></li>
+      </ul>
+    </nav>
+  </header>
+</div>
+  <!-- Introdução -->
+  <section class="intro">
+    <h1>Engajamento de Voluntários</h1>
+    <p>Participe, transforme e deixe sua marca no futuro das crianças.</p>
+  </section>
+
+  <!-- Portal de oportunidades -->
+  <section class="oportunidades" id="oportunidades">
+    <h2>Oportunidades de Voluntariado</h2>
+    <select id="filtroArea">
+      <option value="todos">Todas as áreas</option>
+      <option value="educacao">Educação</option>
+      <option value="eventos">Eventos</option>
+      <option value="comunicacao">Comunicação</option>
+    </select>
+    <div id="listaOportunidades"></div>
+  </section>
+
+  <!-- Formulário de inscrição -->
+  <section class="inscricao" id="inscricao">
+    <h2>Inscreva-se como Voluntário</h2>
+    <form id="formInscricao">
+      <input type="text" id="nome" placeholder="Nome completo" required>
+      <input type="email" id="email" placeholder="E-mail" required>
+      <select id="area" required>
+        <option value="">Área de interesse</option>
+        <option value="educacao">Educação</option>
+        <option value="eventos">Eventos</option>
+        <option value="comunicacao">Comunicação</option>
+      </select>
+      <textarea id="mensagem" placeholder="Por que deseja ser voluntário?" required></textarea>
+      <button type="submit">Enviar inscrição</button>
+    </form>
+    <div id="feedback"></div>
+  </section>
+
+  <!-- Histórico do voluntário -->
+  <section class="areaVoluntario" id="historico">
+    <h2>Minha Jornada como Voluntário</h2>
+    <div id="historicoVoluntario"></div>
+  </section>
+
+  <!-- Certificado digital -->
+  <section class="certificados" id="certificados">
+    <h2>Meus Certificados</h2>
+    <div class="certificado" id="certificado">
+      <p>Certificamos que <strong id="nomeCertificado">[Nome]</strong> participou como voluntário na área de <strong id="areaCertificado">[Área]</strong> em <span id="dataCertificado">[Data]</span>.</p>
+      <button onclick="window.print()">Imprimir Certificado</button>
+    </div>
+  </section>
+  <footer class="site-footer">
+  <div class="footer-content">
+    <div class="footer-logo">
+      <h3>Voluntariado FutureKids</h3>
+      <p>Junte-se a nós para transformar vidas com dedicação e afeto.</p>
+    </div>
+
+    <div class="footer-links">
+      <h4>Para Voluntários</h4>
+      <ul>
+        <li><a href="#oportunidades">Oportunidades</a></li>
+        <li><a href="#inscricao">Inscrição</a></li>
+        <li><a href="#historico">Minha Jornada</a></li>
+        <li><a href="#certificados">Certificados</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-contato">
+      <h4>Contato</h4>
+      <p>📧 voluntarios@futurekids.org.br</p>
+      <p>📞 (11) 97777-7777</p>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>&copy; 2025 FutureKids. Gratidão a todos que fazem parte dessa missão.</p>
+  </div>
+</footer>
+
+  <script src="voluntarios.js"></script>
+</body>
+</html>

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gestão de Projetos | FutureKids</title>
+  <link rel="stylesheet" href="gestao.css">
+</head>
+<body>
+  <!-- Cabeçalho separado da imagem -->
+  <header>
+    <nav class="linksPrincipais">
+      <ul class="menuLinks">
+        <li><a href="areainstitucional.html">Área Institucional</a></li>
+        <li><a href="gestaodeProjetos.html">Gestão de Projetos</a></li>
+        <li><a href="engajamentoDeVoluntarios.html">Engajamento de Voluntários</a></li>
+        <li><a href="captacaoderecursos.html">Captação de recursos</a></li>
+        <li><a href="comunicacaoetransparencia.html">Comunicação e Transparência</a></li>
+      </ul>
+    </nav>
+  </header> 
+  <!-- Introdução sobre como a ONG organiza seus projetos -->
+  <section style="margin-bottom: 60px;">
+  <div class="container" id="metodologia">
+    <h1>Como organizamos nossos projetos</h1>
+    <p>Na FutureKids, cada projeto nasce de um propósito: oferecer às crianças oportunidades reais de crescimento, aprendizado e inclusão. Acreditamos que o desenvolvimento infantil vai muito além da sala de aula — ele acontece nas brincadeiras, nas descobertas, nos vínculos e nas experiências que despertam o potencial de cada criança.</p>
+
+    <p>Por isso, nossa gestão de projetos é feita com carinho, responsabilidade e visão estratégica. Cada iniciativa é cuidadosamente planejada, registrada e acompanhada para garantir que os recursos sejam bem aplicados e que os resultados sejam mensuráveis e transformadores.</p>
+
+    <p>Utilizamos um sistema de cadastro detalhado, onde registramos:</p>
+    <ul>
+      <li><strong>Objetivos e metas:</strong> o que queremos alcançar com cada ação.</li>
+      <li><strong>Público atendido:</strong> perfil das crianças e comunidades envolvidas.</li>
+      <li><strong>Atividades e cronograma:</strong> etapas do projeto e datas previstas.</li>
+      <li><strong>Equipe responsável:</strong> voluntários e profissionais que fazem acontecer.</li>
+      <li><strong>Orçamento e fontes de apoio:</strong> transparência no uso dos recursos.</li>
+      <li><strong>Indicadores de impacto:</strong> como medimos o progresso e os resultados.</li>
+    </ul>
+
+    <p>Além disso, cada projeto conta com uma galeria de fotos e vídeos que documenta os momentos vividos, e um sistema de categorização que facilita a organização por área de atuação, faixa etária ou tipo de atividade.</p>
+
+    <p>Essa estrutura nos permite crescer com consistência, fortalecer parcerias e, acima de tudo, garantir que cada criança atendida pela FutureKids receba o cuidado e a atenção que merece.</p>
+
+    <a href="projetos.html" style="display: inline-block; margin-top: 20px; background-color: #000; color: #fff; padding: 10px 20px; border-radius: 10px; text-decoration: none;">Conheça nossos projetos</a>
+  </div>
+  </section>
+
+  <!-- Galeria de Fotos e Vídeos -->
+  <!-- Galeria de Fotos e Vídeos -->
+<section style="margin-bottom: 160px;">
+  <div class="galeria" id="galeria">
+    <h2>Galeria de Fotos</h2>
+    <div class="grid">
+        <img src="imagensgaleria/atividadesrecreativas1.jpg" alt="Foto 1">
+        <img src="imagensgaleria/atividadesrecreativas2.jpg" alt="Foto 2">
+        <img src="imagensgaleria/atividadesrecreativas3.jpg" alt="Foto 3">
+        <img src="imagensgaleria/atividadesrecreativas4.jpg" alt="Foto 4">
+        <img src="imagensgaleria/atividadesrecreativas5.jpg" alt="Foto 5">
+        <img src="imagensgaleria/atividadesrecreativas6.jpg" alt="Foto 6">
+        <img src="imagensgaleria/atividadesrecreativas7.jpg" alt="Foto 7">
+        <img src="imagensgaleria/atividadesrecreativas8.jpg" alt="Foto 8">
+        <img src="imagensgaleria/atividadesrecreativas9.jpg" alt="Foto 9">
+      </div>
+
+       <h2>Galeria de Vídeos</h2>
+    <div class="grid">
+      <video controls>
+        <source src="videosgaleria/watermarked-b6de6105-f291-4f55-9e65-7e9e13c5be0c.mp4" type="video/mp4">
+        Seu navegador não suporta vídeo.
+      </video>
+    </div>
+  </div>
+  </section>
+  <section class="indicadores">
+  <h2>Indicadores de Impacto</h2>
+  <div class="indicador-grid">
+    <div class="indicador"><h3 id="criancas">0</h3><p>Crianças atendidas</p></div>
+    <div class="indicador"><h3 id="atividades">0</h3><p>Atividades realizadas</p></div>
+    <div class="indicador"><h3 id="presenca">0%</h3><p>Participação média</p></div>
+  </div>
+</section>
+
+<!-- Filtro de categorias -->
+<section class="categorias">
+  <h2>Filtrar por Categoria</h2>
+  <select id="filtroCategoria">
+    <option value="todos">Todos</option>
+    <option value="educacao">Educação</option>
+    <option value="esporte">Esporte</option>
+    <option value="cultura">Cultura</option>
+  </select>
+
+  <div id="projetos">
+    <div class="projeto" data-categoria="educacao">Projeto Alfabetizar</div>
+    <div class="projeto" data-categoria="esporte">Projeto Movimento</div>
+    <div class="projeto" data-categoria="cultura">Projeto Arte Livre</div>
+  </div>
+</section>
+<footer class="site-footer">
+  <div class="footer-content">
+    <div class="footer-logo">
+      <h3>Gestão de Projetos</h3>
+      <p>Planejamento, impacto e transparência em cada ação realizada.</p>
+    </div>
+
+    <div class="footer-links">
+      <h4>Documentação</h4>
+      <ul>
+        <li><a href="#metodologia">Metodologia</a></li>
+        <li><a href="#projetos">Projetos</a></li>
+        <li><a href="#galeria">Galeria de Projetos</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-contato">
+      <h4>Coordenação</h4>
+      <p>📧 projetos@futurekids.org.br</p>
+      <p>📞 (11) 98888-8888</p>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>&copy; 2025 FutureKids. Gestão com propósito e resultados.</p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

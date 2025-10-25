@@ -1,25 +1,29 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>Engajamento de Voluntários | FutureKids</title>
-  <link rel="stylesheet" href="voluntarios.css">
+  <link rel="stylesheet" href="css/voluntarios.css" />
 </head>
 <body>
   <!-- Cabeçalho institucional -->
-<div class="hero">
   <header>
+    <div class="menu-toggle" aria-label="Abrir menu de navegação">☰</div>
     <nav class="linksPrincipais">
       <ul class="menuLinks">
         <li><a href="areainstitucional.html">Área Institucional</a></li>
-        <li><a href="gestaodeProjetos.html">Gestão de Projetos</a></li>
-        <li><a href="engajamentoDeVoluntarios.html">Engajamento de Voluntários</a></li>
-        <li><a href="captacaoderecursos.html">Captação de recursos</a></li>
-        <li><a href="comunicacaoetransparencia.html">Comunicação e Transparência</a></li>
+        <li class="has-submenu">
+          <a href="#">Projetos</a>
+          <ul class="submenu">
+            <li><a href="gestaodeProjetos.html">Gestão de Projetos</a></li>
+            <li><a href="captacaoderecursos.html">Captação de recursos</a></li>
+            <li><a href="comunicacaoetransparencia.html">Transparência</a></li>
+          </ul>
+        </li>
       </ul>
     </nav>
   </header>
-</div>
+
   <!-- Introdução -->
   <section class="intro">
     <h1>Engajamento de Voluntários</h1>
@@ -35,15 +39,35 @@
       <option value="eventos">Eventos</option>
       <option value="comunicacao">Comunicação</option>
     </select>
-    <div id="listaOportunidades"></div>
+
+    <div id="listaOportunidades">
+      <div class="card-oportunidade" data-categoria="educacao">
+        <h3>Monitor de Alfabetização</h3>
+        <p>Ajude crianças em fase de alfabetização com atividades lúdicas e apoio pedagógico.</p>
+        <span class="badge">📘 Educação</span>
+        <button class="botao-inscricao">Inscrever-se</button>
+      </div>
+      <div class="card-oportunidade" data-categoria="eventos">
+        <h3>Organizador de Eventos</h3>
+        <p>Auxilie na produção de eventos culturais e educativos para a comunidade.</p>
+        <span class="badge">🎪 Eventos</span>
+        <button class="botao-inscricao">Inscrever-se</button>
+      </div>
+      <div class="card-oportunidade" data-categoria="comunicacao">
+        <h3>Comunicador Social</h3>
+        <p>Ajude na divulgação dos projetos e histórias inspiradoras da ONG.</p>
+        <span class="badge">📣 Comunicação</span>
+        <button class="botao-inscricao">Inscrever-se</button>
+      </div>
+    </div>
   </section>
 
   <!-- Formulário de inscrição -->
   <section class="inscricao" id="inscricao">
     <h2>Inscreva-se como Voluntário</h2>
     <form id="formInscricao">
-      <input type="text" id="nome" placeholder="Nome completo" required>
-      <input type="email" id="email" placeholder="E-mail" required>
+      <input type="text" id="nome" placeholder="Nome completo" required />
+      <input type="email" id="email" placeholder="E-mail" required />
       <select id="area" required>
         <option value="">Área de interesse</option>
         <option value="educacao">Educação</option>
@@ -54,6 +78,7 @@
       <button type="submit">Enviar inscrição</button>
     </form>
     <div id="feedback"></div>
+    <div class="toast" id="toastSucesso">Inscrição enviada com sucesso!</div>
   </section>
 
   <!-- Histórico do voluntário -->
@@ -70,35 +95,36 @@
       <button onclick="window.print()">Imprimir Certificado</button>
     </div>
   </section>
+
+  <!-- Rodapé -->
   <footer class="site-footer">
-  <div class="footer-content">
-    <div class="footer-logo">
-      <h3>Voluntariado FutureKids</h3>
-      <p>Junte-se a nós para transformar vidas com dedicação e afeto.</p>
+    <div class="footer-content">
+      <div class="footer-logo">
+        <h3>Voluntariado FutureKids</h3>
+        <p>Junte-se a nós para transformar vidas com dedicação e afeto.</p>
+      </div>
+      <div class="footer-links">
+        <h4>Para Voluntários</h4>
+        <ul>
+          <li><a href="#oportunidades">Oportunidades</a></li>
+          <li><a href="#inscricao">Inscrição</a></li>
+          <li><a href="#historico">Minha Jornada</a></li>
+          <li><a href="#certificados">Certificados</a></li>
+        </ul>
+      </div>
+      <div class="footer-contato">
+        <h4>Contato</h4>
+        <p>📧 voluntarios@futurekids.org.br</p>
+        <p>📞 (11) 97777-7777</p>
+      </div>
     </div>
-
-    <div class="footer-links">
-      <h4>Para Voluntários</h4>
-      <ul>
-        <li><a href="#oportunidades">Oportunidades</a></li>
-        <li><a href="#inscricao">Inscrição</a></li>
-        <li><a href="#historico">Minha Jornada</a></li>
-        <li><a href="#certificados">Certificados</a></li>
-      </ul>
+    <div class="footer-bottom">
+      <p>&copy; 2025 FutureKids. Gratidão a todos que fazem parte dessa missão.</p>
     </div>
+  </footer>
 
-    <div class="footer-contato">
-      <h4>Contato</h4>
-      <p>📧 voluntarios@futurekids.org.br</p>
-      <p>📞 (11) 97777-7777</p>
-    </div>
-  </div>
-
-  <div class="footer-bottom">
-    <p>&copy; 2025 FutureKids. Gratidão a todos que fazem parte dessa missão.</p>
-  </div>
-</footer>
-
-  <script src="voluntarios.js"></script>
+  <!-- Scripts -->
+  <script src="js/submenu.js"></script>
+  <script src="js/voluntarios.js"></script>
 </body>
 </html>

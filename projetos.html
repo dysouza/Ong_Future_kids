@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>Projetos | FutureKids</title>
-  <link rel="stylesheet" href="projetos.css">
+  <link rel="stylesheet" href="css/projetos.css" />
 </head>
 <body>
-  <header>
-    <h1>Nossos Projetos</h1>
-  </header>
+  <!-- Título da página -->
+  <h1 class="titulo-pagina">Nossos Projetos</h1>
 
+  <!-- Filtro de categoria -->
   <section class="filtro">
     <label for="filtroCategoria">Filtrar por categoria:</label>
     <select id="filtroCategoria">
@@ -18,15 +18,20 @@
       <option value="esporte">Esporte</option>
       <option value="cultura">Cultura</option>
     </select>
-  </section>s
+  </section>
 
+  <!-- Lista de projetos -->
   <section id="listaProjetos">
     <!-- Projetos serão inseridos aqui via JS -->
   </section>
-  <a href="gestaodeProjetos.html" class="botao-voltar">
-  ← Voltar para Gestão de Projetos
-</a>
 
-  <script src="projetos.js"></script>
+  <!-- Botão de retorno -->
+  <a href="gestaodeProjetos.html" class="botao-voltar">← Voltar para Gestão de Projetos</a>
+
+  <!-- Toast de feedback -->
+  <div class="toast" id="toastProjetos">Projeto carregado com sucesso!</div>
+
+  <!-- Scripts -->
+  <script src="js/projetos.js"></script>
 </body>
 </html>

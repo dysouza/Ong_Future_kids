@@ -1,3 +1,4 @@
+
 // Contador animado de indicadores
 function contar(id, valorFinal, sufixo = '', duracao = 2000) {
   const elemento = document.getElementById(id);

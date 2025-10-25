@@ -1,31 +1,35 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>Captação de Recursos | FutureKids</title>
-  <link rel="stylesheet" href="captacao.css">
+  <link rel="stylesheet" href="css/captacao.css" />
 </head>
 <body>
-
   <!-- Header institucional -->
   <header>
+    <div class="menu-toggle" aria-label="Abrir menu de navegação">☰</div>
     <nav class="linksPrincipais">
       <ul class="menuLinks">
         <li><a href="areainstitucional.html">Área Institucional</a></li>
-        <li><a href="gestaodeProjetos.html">Gestão de Projetos</a></li>
-        <li><a href="engajamentoDeVoluntarios.html">Voluntariado</a></li>
-        <li><a href="captacaoderecursos.html">Captação de Recursos</a></li>
-        <li><a href="comunicacaoetransparencia.html">Transparência</a></li>
+        <li class="has-submenu">
+          <a href="#">Projetos</a>
+          <ul class="submenu">
+            <li><a href="gestaodeProjetos.html">Gestão de Projetos</a></li>
+            <li><a href="engajamentoDeVoluntarios.html">Voluntariado</a></li>
+            <li><a href="comunicacaoetransparencia.html">Transparência</a></li>
+          </ul>
+        </li>
       </ul>
     </nav>
   </header>
 
   <main>
-
     <!-- Campanhas de arrecadação -->
     <section class="campanhas">
       <h2>Campanhas de Arrecadação</h2>
       <p>Participe das nossas campanhas e ajude a transformar a vida de centenas de crianças.</p>
+      <span class="badge">🎯 Meta ativa</span>
       <a href="#doar" class="botao-doar">Quero Contribuir</a>
     </section>
 
@@ -34,16 +38,17 @@
       <h2>Faça sua Doação Online</h2>
       <p>Escolha um valor e contribua com segurança. Toda ajuda faz a diferença!</p>
       <form id="formDoacao">
-        <input type="number" id="valor" placeholder="Valor (R$)" required>
-        <input type="text" id="nome" placeholder="Nome completo" required>
-        <input type="email" id="email" placeholder="E-mail" required>
+        <input type="number" id="valor" placeholder="Valor (R$)" required />
+        <input type="text" id="nome" placeholder="Nome completo" required />
+        <input type="email" id="email" placeholder="E-mail" required />
         <button type="submit">Doar Agora</button>
       </form>
       <div id="mensagemDoacao"></div>
+      <div class="toast" id="toastDoacao">Obrigado pela sua contribuição!</div>
     </section>
 
     <!-- Metas e progresso -->
-    <section class="metas">
+    <section class="metas" id="metas">
       <h2>Meta de Arrecadação</h2>
       <p>Estamos quase lá! Acompanhe nosso progresso em tempo real:</p>
       <div class="progresso-container">
@@ -53,26 +58,22 @@
     </section>
 
     <!-- Relatórios -->
-    <section class="relatorios">
-  <h2>Prestação de Contas</h2>
-  <p>Transparência é nosso compromisso. Baixe os relatórios das campanhas anteriores:</p>
-  <ul class="lista-relatorios">
-    <li>
-      <span>📄 Relatório Trimestral - Julho 2025</span>
-      <a href="relátórioscaptcao/Relatorio_Trimestral_Julho_2025.pdf" download class="botao-download">Baixar PDF</a>
-    </li>
-    <li>
-      <span>📄 Relatório Trimestral - Abril 2025</span>
-      <a href="relátórioscaptcao/Relatorio_Trimestral_Abril_2025.pdf" download class="botao-download">Baixar PDF</a>
-    </li>
-    <li>
-      <span>📄 Relatório Anual - 2024</span>
-      <a href="relátórioscaptcao/Relatorio_Anual_2024.pdf" download class="botao-download">Baixar PDF</a>
-    </li>
-  </ul>
-</section>
-
-
+    <section class="relatorios" id="relatorios">
+      <h2>Prestação de Contas</h2>
+      <p>Transparência é nosso compromisso. Baixe os relatórios das campanhas anteriores:</p>
+      <div class="card-relatorio">
+        <span>📄 Relatório Trimestral - Julho 2025</span>
+        <a href="relátórioscaptcao/Relatorio_Trimestral_Julho_2025.pdf" download class="botao-download">Baixar PDF</a>
+      </div>
+      <div class="card-relatorio">
+        <span>📄 Relatório Trimestral - Abril 2025</span>
+        <a href="relátórioscaptcao/Relatorio_Trimestral_Abril_2025.pdf" download class="botao-download">Baixar PDF</a>
+      </div>
+      <div class="card-relatorio">
+        <span>📄 Relatório Anual - 2024</span>
+        <a href="relátórioscaptcao/Relatorio_Anual_2024.pdf" download class="botao-download">Baixar PDF</a>
+      </div>
+    </section>
   </main>
 
   <!-- Footer personalizado -->
@@ -82,7 +83,6 @@
         <h3>Captação FutureKids</h3>
         <p>Juntos, podemos transformar o futuro com cada contribuição.</p>
       </div>
-
       <div class="footer-links">
         <h4>Transparência</h4>
         <ul>
@@ -91,20 +91,19 @@
           <li><a href="#relatorios">Relatórios</a></li>
         </ul>
       </div>
-
       <div class="footer-contato">
         <h4>Contato</h4>
         <p>📧 captacao@futurekids.org.br</p>
         <p>📞 (11) 96666-6666</p>
       </div>
     </div>
-
     <div class="footer-bottom">
       <p>&copy; 2025 FutureKids. Sua doação constrói futuros.</p>
     </div>
   </footer>
 
-  <script src="captacao.js"></script>
-
+  <!-- Scripts -->
+  <script src="js/submenu.js"></script>
+  <script src="js/captacao.js"></script>
 </body>
 </html>

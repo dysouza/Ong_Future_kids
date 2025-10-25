@@ -1,0 +1,170 @@
+:root {
+  /* 🎨 Paleta de cores */
+  --color-bg: #ffffff;
+  --color-text: #fff;
+  --color-card: #1a1a1a;
+  --color-tag: #0077cc;
+  --color-hover: #2c373f;
+  --color-button: #0077cc;
+  --color-success: #28a745;
+  --color-error: #dc3545;
+  --color-muted: #ccc;
+
+  /* 🔤 Tipografia */
+  --font-family-base: Arial, sans-serif;
+  --font-size-xs: 12px;
+  --font-size-sm: 14px;
+  --font-size-md: 15px;
+  --font-size-lg: 16px;
+  --font-size-xl: 20px;
+
+  /* 📏 Espaçamento */
+  --space-1: 10px;
+  --space-2: 12px;
+  --space-3: 20px;
+  --space-4: 30px;
+  --space-5: 40px;
+}
+
+/* === BASE === */
+body {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-family-base);
+  padding: var(--space-3);
+}
+
+/* === TÍTULO DA PÁGINA === */
+.titulo-pagina {
+  text-align: center;
+  margin-bottom: var(--space-5);
+  color: var(--color-card);
+  font-size: var(--font-size-xl);
+}
+
+/* === FILTRO === */
+.filtro {
+  text-align: center;
+  margin-bottom: var(--space-4);
+  color: var(--color-card);
+}
+
+.filtro label {
+  font-weight: bold;
+  margin-right: var(--space-2);
+}
+
+select {
+  padding: var(--space-1);
+  border-radius: var(--space-1);
+  border: 1px solid var(--color-muted);
+  font-size: var(--font-size-md);
+}
+
+/* === LISTA DE PROJETOS === */
+#listaProjetos {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* === CARD DE PROJETO === */
+.projeto {
+  background-color: var(--color-card);
+  padding: var(--space-3);
+  border-radius: var(--space-3);
+  margin-bottom: var(--space-3);
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  color: var(--color-text);
+}
+
+.projeto h3 {
+  margin-bottom: var(--space-1);
+  font-size: var(--font-size-lg);
+}
+
+.projeto p {
+  font-size: var(--font-size-md);
+  margin-bottom: var(--space-2);
+}
+
+.projeto .tag {
+  display: inline-block;
+  background-color: var(--color-tag);
+  padding: var(--space-1) var(--space-2);
+  border-radius: var(--space-1);
+  font-size: var(--font-size-xs);
+  margin-top: var(--space-1);
+}
+
+/* === BOTÃO VOLTAR === */
+.botao-voltar {
+  display: inline-block;
+  background-color: var(--color-button);
+  color: var(--color-text);
+  padding: var(--space-2) var(--space-3);
+  border-radius: var(--space-3);
+  text-decoration: none;
+  font-weight: bold;
+  font-size: var(--font-size-lg);
+  margin: var(--space-5) auto;
+  text-align: center;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.botao-voltar:hover {
+  background-color: var(--color-hover);
+  transform: scale(1.05);
+}
+
+/* === TOAST DE FEEDBACK === */
+.toast {
+  position: fixed;
+  bottom: var(--space-3);
+  right: var(--space-3);
+  background-color: var(--color-success);
+  color: var(--color-text);
+  padding: var(--space-2) var(--space-3);
+  border-radius: var(--space-2);
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  display: none;
+  z-index: 999;
+  font-size: var(--font-size-sm);
+}
+
+.toast.show {
+  display: block;
+}
+
+/* === FORMULÁRIO INVALIDO (se houver) === */
+input:invalid,
+select:invalid {
+  border: 2px solid var(--color-error);
+  background-color: #ffe6e6;
+}
+
+/* === RESPONSIVO === */
+@media (max-width: 768px) {
+  body {
+    padding: var(--space-2);
+  }
+
+  .titulo-pagina {
+    font-size: var(--font-size-lg);
+  }
+
+  .projeto {
+    padding: var(--space-2);
+  }
+
+  .botao-voltar {
+    width: 100%;
+    display: block;
+    margin: var(--space-4) auto;
+  }
+
+  .toast {
+    bottom: var(--space-2);
+    right: var(--space-2);
+    font-size: var(--font-size-xs);
+  }
+}

@@ -48,7 +48,7 @@ body {
   width: 100%;
   min-height: 400px;
   height: 100vh;
-  background-image: url('/imagensinstitucional/hero.jpg');
+  background-image: url('imagensinstitucional/hero.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;

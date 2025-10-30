@@ -28,6 +28,14 @@
   <!-- Introdução sobre como a ONG organiza seus projetos -->
   <section style="margin-bottom: 60px;">
     <div class="container" id="metodologia">
+      <!-- Modal com conteúdo dos projetos -->
+<div id="modalProjetos" class="modal">
+  <div class="modal-conteudo">
+    <span class="fechar" onclick="fecharModalProjetos()">&times;</span>
+    <h2>Projetos em Destaque</h2>
+    <div id="conteudoProjetos"></div>
+  </div>
+</div>
       <h1>Como organizamos nossos projetos</h1>
       <p>Na FutureKids, cada projeto nasce de um propósito: oferecer às crianças oportunidades reais de crescimento, aprendizado e inclusão...</p>
       <ul>
@@ -39,7 +47,7 @@
         <li><strong>Indicadores de impacto:</strong> como medimos o progresso e os resultados.</li>
       </ul>
       <p>Essa estrutura nos permite crescer com consistência, fortalecer parcerias e garantir que cada criança receba o cuidado e a atenção que merece.</p>
-      <a href="projetos.html" class="botao-relatorio">Conheça nossos projetos</a>
+      <button class="botao-projetos" onclick="abrirModalProjetos()">Conheça nossos projetos</button>
     </div>
   </section>
 
@@ -47,20 +55,21 @@
   <section style="margin-bottom: 160px;">
     <div class="galeria" id="galeria">
       <h2>Galeria de Fotos</h2>
-      <div class="grid">
-        <img src="imagensgaleria/atividadesrecreativas1.jpg" alt="Foto 1" />
-        <img src="imagensgaleria/atividadesrecreativas2.jpg" alt="Foto 2" />
-        <img src="imagensgaleria/atividadesrecreativas3.jpg" alt="Foto 3" />
-        <img src="imagensgaleria/atividadesrecreativas4.jpg" alt="Foto 4" />
-        <img src="imagensgaleria/atividadesrecreativas5.jpg" alt="Foto 5" />
-        <img src="imagensgaleria/atividadesrecreativas6.jpg" alt="Foto 6" />
-        <img src="imagensgaleria/atividadesrecreativas7.jpg" alt="Foto 7" />
-        <img src="imagensgaleria/atividadesrecreativas8.jpg" alt="Foto 8" />
-        <img src="imagensgaleria/atividadesrecreativas9.jpg" alt="Foto 9" />
+      <div class="slideshow-container" id="slideshow">
+        <img class="slide" src="imagensgaleria/atividadesrecreativas1.jpg" alt="Foto 1" />
+        <img class="slide" src="imagensgaleria/atividadesrecreativas2.jpg" alt="Foto 2" />
+        <img class="slide" src="imagensgaleria/atividadesrecreativas3.jpg" alt="Foto 3" />
+        <img class="slide" src="imagensgaleria/atividadesrecreativas4.jpg" alt="Foto 4" />
+        <img class="slide" src="imagensgaleria/atividadesrecreativas5.jpg" alt="Foto 5" />
+        <img class="slide" src="imagensgaleria/atividadesrecreativas6.jpg" alt="Foto 6" />
+        <img class="slide" src="imagensgaleria/atividadesrecreativas7.jpg" alt="Foto 7" />
+        <img class="slide" src="imagensgaleria/atividadesrecreativas8.jpg" alt="Foto 8" />
+        <img class="slide" src="imagensgaleria/atividadesrecreativas9.jpg" alt="Foto 9" />
+        <button class="prev">&#10094;</button>
+        <button class="next">&#10095;</button>
       </div>
-
-      <h2>Galeria de Vídeos</h2>
       <div class="grid">
+        <h2>Apresentação sobre o future kids</h2>
         <video controls>
           <source src="videosgaleria/watermarked-b6de6105-f291-4f55-9e65-7e9e13c5be0c.mp4" type="video/mp4" />
           Seu navegador não suporta vídeo.
@@ -124,7 +133,7 @@
       <div class="footer-contato">
         <h4>Coordenação</h4>
         <p>📧 projetos@futurekids.org.br</p>
-        <p>📞 (11) 98888-8888</p>
+        <p>📞 (11) 99999-9999</p>
       </div>
     </div>
 
@@ -134,7 +143,8 @@
   </footer>
 
   <!-- Scripts -->
-  <script src="js/script.js"></script>
+   <script src="js/projetos.js"></script>
+  <script src="js/gestao.js"></script>
   <script src="js/submenu.js"></script>
 </body>
 </html>

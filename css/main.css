@@ -9,7 +9,6 @@
   --color-success: #28a745;
   --color-warning: #ffc107;
   --color-error: #dc3545;
-
   /* Tipografia */
   --font-size-xs: 12px;
   --font-size-sm: 14px;
@@ -131,6 +130,7 @@ header {
   display: block;
 }
 
+
 /* Seções institucionais */
 .institucional-container {
   background-color: var(--color-light);
@@ -167,7 +167,19 @@ header {
   padding-left: var(--space-2);
 }
 
+/* Badges */
+.badge {
+  display: inline-block;
+  background-color: var(--color-dark);
+  color: var(--color-light);
+  padding: var(--space-1) var(--space-1);
+  border-radius: var(--space-3);
+  font-size: var(--font-size-xs);
+  margin-right: var(--space-1);
+}
+
 /* Relatórios */
+
 .relatorio-container {
   display: flex;
   justify-content: center;
@@ -189,6 +201,19 @@ header {
   line-height: 1.8;
   margin-bottom: var(--space-2);
 }
+#relatorios {
+  transition: opacity 0.4s ease;
+}
+#relatorios.escondido {
+  opacity: 0;
+  pointer-events: none;
+  height: 0;
+  overflow: hidden;
+}
+/* Para esconder relatorio*/
+.escondido {
+  display: none;
+}
 .relatorio-botoes {
   display: flex;
   flex-wrap: wrap;
@@ -203,6 +228,7 @@ header {
   border-radius: var(--space-2);
   text-decoration: none;
   font-weight: bold;
+  cursor: pointer;
   transition: background-color 0.3s ease;
 }
 .botao-relatorio:hover {
@@ -220,16 +246,6 @@ header {
   opacity: 0.6;
 }
 
-/* Badges */
-.badge {
-  display: inline-block;
-  background-color: var(--color-secondary);
-  color: var(--color-light);
-  padding: var(--space-1) var(--space-2);
-  border-radius: var(--space-1);
-  font-size: var(--font-size-xs);
-  margin-right: var(--space-1);
-}
 
 /* Footer */
 .site-footer {

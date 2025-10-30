@@ -10,6 +10,7 @@
   --color-success: #28a745;
   --color-warning: #ffc107;
   --color-error: #dc3545;
+  --color-section-bg: #f5f7fa; /* novo fundo para destacar seções */
 
   /* 🔤 Tipografia */
   --font-family-base: 'Arial', sans-serif;
@@ -46,6 +47,29 @@ body {
   font-family: var(--font-family-base);
   background-color: var(--color-bg-light);
   color: var(--color-text-dark);
+}
+
+section,
+.container,
+.galeria,
+.indicadores,
+.categorias {
+  background-color: var(--color-section-bg);
+  margin-top: var(--space-7);
+  margin-bottom: var(--space-7);
+  padding-top: var(--space-6);
+  padding-bottom: var(--space-6);
+  border-radius: var(--space-4);
+}
+
+h1, h2, h3 {
+  margin-top: var(--space-5);
+  margin-bottom: var(--space-4);
+}
+
+p {
+  margin-bottom: var(--space-3);
+  line-height: 1.8;
 }
 
 /* === HEADER E MENU === */
@@ -139,7 +163,7 @@ header {
   max-width: 800px;
   margin: var(--space-7) auto;
   padding: 0 var(--space-4);
-  background-color: var(--color-muted);
+  background-color: var(--color-bg-dark);
   border-radius: var(--space-6);
   box-shadow: 0 0 20px rgba(17, 29, 37, 0.3);
   text-align: center;
@@ -155,7 +179,7 @@ header {
   font-size: var(--font-size-lg);
   line-height: 1.6;
   margin-bottom: var(--space-4);
-  color: var(--color-secondary);
+  color: var(--color-bg-light);
 }
 
 .container ul {
@@ -169,14 +193,15 @@ header {
 .container li {
   margin-bottom: var(--space-2);
   font-size: var(--font-size-md);
-  color: var(--color-secondary);
+  color: var(--color-bg-light);
 }
 
-.container a {
+.container .botao-projetos {
+  cursor: pointer;
   display: inline-block;
   margin-top: var(--space-4);
   margin-bottom: var(--space-4);
-  background-color: var(--color-bg-dark);
+  background-color: var(--color-primary);
   color: var(--color-text-light);
   padding: var(--space-1) var(--space-2);
   border-radius: var(--space-7);
@@ -185,7 +210,7 @@ header {
   transition: background-color 0.3s ease;
 }
 
-.container a:hover {
+.container .botao-projetos:hover {
   background-color: var(--color-secondary);
   transform: scale(1.01);
 }
@@ -222,6 +247,52 @@ header {
   cursor: not-allowed;
   opacity: 0.6;
 }
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.6);
+}
+
+.modal-conteudo {
+  background-color: var(--color-bg-dark);
+  color: var(--color-primary);
+  margin: 5% auto;
+  padding: var(--space-5);
+  border-radius: var(--space-4);
+  width: 90%;
+  max-width: 700px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.3);
+  text-align: left;
+  max-height: 80vh;
+  overflow-y: auto;
+}
+
+.fechar {
+  color: var(--color-muted);
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.fechar:hover {
+  color: var(--color-error);
+}
+
+.modal-conteudo h3 {
+  margin-top: var(--space-4);
+  color: var(--color-primary);
+}
+
+.modal-conteudo p {
+  margin-bottom: var(--space-3);
+  line-height: 1.6;
+}
 
 /* === BADGES === */
 .badge {
@@ -234,8 +305,9 @@ header {
   margin-left: var(--space-2);
 }
 
-/* === GALERIA === */
+/* === GALERIA SLIDESHOW === */
 .galeria {
+  cursor: pointer;
   max-width: 900px;
   margin: var(--space-7) auto;
   padding: 0 var(--space-4);
@@ -247,14 +319,56 @@ header {
   margin-bottom: var(--space-4);
 }
 
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: var(--space-4);
+.slideshow-container {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+  overflow: hidden;
+  border-radius: 12px;
 }
 
-.grid img,
+.slide {
+  display: none;
+  width: 100%;
+  border-radius: 12px;
+}
+
+.slide.active {
+  display: block;
+}
+
+.prev,
+.next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0,0,0,0.6);
+  color: white;
+  border: none;
+  padding: 12px;
+  cursor: pointer;
+  font-size: 18px;
+  border-radius: 50%;
+  z-index: 10;
+}
+
+.prev:hover,
+.next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
+.grid h2{
+  margin-top: 120px;
+}
 .grid video {
+  margin-top: 100px;
   width: 100%;
   border-radius: var(--space-2);
   box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);

@@ -12,8 +12,14 @@ function renderizarOportunidades(area = "todos") {
 
   filtradas.forEach(o => {
     const div = document.createElement("div");
-    div.className = "oportunidade";
-    div.innerHTML = `<h3>${o.titulo}</h3><p>${o.descricao}</p><span><strong>Área:</strong> ${o.area}</span>`;
+    div.className = "card-oportunidade";
+    div.setAttribute("data-categoria", o.area);
+    div.innerHTML = `
+      <h3>${o.titulo}</h3>
+      <p>${o.descricao}</p>
+      <span class="badge">📘 ${o.area.charAt(0).toUpperCase() + o.area.slice(1)}</span>
+      <button class="botao-inscricao">Inscrever-se</button>
+    `;
     container.appendChild(div);
   });
 }
@@ -25,18 +31,45 @@ document.getElementById("filtroArea").addEventListener("change", e => {
 document.getElementById("formInscricao").addEventListener("submit", e => {
   e.preventDefault();
 
-  const nome = document.getElementById("nome").value;
-  const email = document.getElementById("email").value;
+  const nome = document.getElementById("nome").value.trim();
+  const email = document.getElementById("email").value.trim();
   const area = document.getElementById("area").value;
-  const mensagem = document.getElementById("mensagem").value;
+  const mensagem = document.getElementById("mensagem").value.trim();
+  const feedback = document.getElementById("feedback");
+  const toast = document.getElementById("toastSucesso");
 
+  let erros = [];
+
+  // Validação
+  if (nome === "") erros.push("⚠️ O campo Nome é obrigatório.");
+  if (email === "") {
+    erros.push("⚠️ O campo E-mail é obrigatório.");
+  } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+    erros.push("⚠️ O e-mail informado não é válido.");
+  }
+  if (area === "") erros.push("⚠️ Selecione uma área de interesse.");
+  if (mensagem === "") erros.push("⚠️ Escreva uma mensagem sobre seu interesse.");
+
+  if (erros.length > 0) {
+    feedback.innerHTML = erros.map(msg => `<p class="erro">${msg}</p>`).join("");
+    toast.style.display = "none";
+    return;
+  }
+
+  // Sucesso
   const data = new Date().toLocaleDateString("pt-BR");
-
   localStorage.setItem("voluntario", JSON.stringify({ nome, email, area, mensagem, data }));
 
-  document.getElementById("feedback").innerHTML = `<p>Obrigado, ${nome}! Sua inscrição foi recebida.</p>`;
+  feedback.innerHTML = "";
+  toast.style.display = "block";
+
   atualizarHistorico();
   gerarCertificado();
+
+  setTimeout(() => {
+    toast.style.display = "none";
+    document.getElementById("formInscricao").reset();
+  }, 3000);
 });
 
 function atualizarHistorico() {

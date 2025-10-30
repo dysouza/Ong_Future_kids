@@ -154,13 +154,17 @@ p {
   color: var(--color-text-light);
   padding: var(--space-4);
   border-radius: var(--space-3);
-  margin-bottom: var(--space-4);
+  margin: var(--space-4) auto; 
+  max-width: 600px; 
   box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  text-align: center; 
 }
 
 .card-oportunidade h3 {
+  display: block; 
   font-size: var(--font-size-xl);
   margin-bottom: var(--space-2);
+  text-align: center;
 }
 
 .card-oportunidade p {

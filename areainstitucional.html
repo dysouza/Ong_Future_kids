@@ -13,8 +13,8 @@
       <nav class="linksPrincipais">
         <ul class="menuLinks">
           <li><a href="areainstitucional.html">Área Institucional</a></li>
-          <li><a href="#relatorios">Relatórios</a></li>
           <li><a href="#missao-visao">Missão</a></li>
+          <li><a href="#equipe">Equipe</a></li>
           <li class="has-submenu">
             <a href="#">Projetos</a>
             <ul class="submenu">
@@ -28,7 +28,6 @@
       </nav>
     </header>
   </div>
-
   <section id="missao-visao" class="institucional-container">
     <div class="institucional-imagem">
       <img src="imagensinstitucional/missão.png" alt="Imagem com missão, visão e valores" />
@@ -50,24 +49,9 @@
       </ul>
     </div>
   </section>
-
   <section id="conquistas" class="institucional-container">
-    <div class="institucional-texto">
-      <h2>Conquistas</h2>
-      <ul>
-        <li>Mais de <strong>12 mil crianças e adolescentes</strong> atendidos em projetos educacionais, culturais e sociais.</li>
-        <li><strong>Reconhecimento oficial</strong> como entidade de utilidade pública municipal desde 2018.</li>
-        <li>Criação do projeto <strong>“Jovens Protagonistas”</strong>, com mais de 800 líderes comunitários formados.</li>
-        <li><strong>Parcerias com 25 escolas públicas</strong> para atividades extracurriculares e apoio pedagógico.</li>
-        <li>Realização de <strong>60 espetáculos culturais</strong> com participação ativa dos jovens atendidos.</li>
-        <li>Instalação de <strong>10 bibliotecas comunitárias</strong> em regiões periféricas.</li>
-        <li><span class="badge">🏆 Destaque</span> Recebimento do <strong>Prêmio Nacional de Inovação Social</strong> em 2022 pelo projeto “Educação que Acolhe”.</li>
-        <li>Distribuição de mais de <strong>20 mil kits escolares e culturais</strong> por meio de campanhas de arrecadação.</li>
-      </ul>
-    </div>
-    <div class="institucional-imagem">
-      <img src="imagensinstitucional/Conquistas.png" alt="Jovens celebrando conquistas educacionais" />
-    </div>
+  <!-- O conteúdo será gerado via JS -->
+  </section>
   </section>
 
   <section id="equipe" class="institucional-container">
@@ -92,8 +76,13 @@
       <img src="imagensinstitucional/equipe-futurekids.png" alt="Foto da equipe FutureKids em ação" />
     </div>
   </section>
-
-  <section id="relatorios" class="relatorio-container">
+<div style="text-align: center; margin-top: 40px;">
+  <button id="btn-relatorios" class="botao-relatorio">Ver Relatórios</button>
+</div>
+  <div style="text-align: center; margin-top: 20px;">
+  <button id="btn-esconder-relatorios" class="botao-relatorio escondido">Esconder Relatórios</button>
+</div>
+  <section id="relatorios" class="relatorio-container escondido">
     <div class="relatorio-texto">
       <h2>Relatórios de Transparência</h2>
       <p>Em 2025, a FutureKids consolidou sua atuação como referência nacional em projetos educacionais, culturais e sociais voltados ao desenvolvimento integral de crianças e adolescentes.</p>
@@ -109,7 +98,7 @@
       </div>
     </div>
   </section>
-
+  
   <footer class="site-footer">
     <div class="footer-content">
       <div class="footer-logo">
@@ -136,6 +125,8 @@
       <p>&copy; 2025 FutureKids. Todos os direitos reservados.</p>
     </div>
   </footer>
+  <script src="js/conquistas.js"></script>
+  <script src="js/botaorelatorio.js"></script>
   <script src="js/submenu.js"></script>
 </body>
 </html>
